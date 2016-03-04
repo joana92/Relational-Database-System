@@ -1,0 +1,38 @@
+CREATE course (courseid INT, coursetitle STRING, facultyid INT, semester STRING)
+CREATE faculty ( id INT, name STRING, designation STRING, department STRING)
+CREATE student(studentid INT, name STRING, department STRING)
+CREATE coursestudent(studentid INT, courseid INT)
+INSERT INTO course(1, 'Computer Architecture', 1, 'Spring 2015')
+INSERT INTO course(2, 'Data Mining', 2, 'Spring 2015')
+INSERT INTO course(3, 'Database System', 3, 'Spring 2015')
+INSERT INTO course(4, 'Big Data', 4, 'Spring 2015')
+INSERT INTO faculty(1, 'Larry Shi', 'Associate Professor',       'COSC')
+INSERT INTO faculty(2, 'Arjun Mukherjee', 'Assistant Professor',       'COSC')
+INSERT INTO faculty(3, 'Francias Paris', 'Professor',       'COSC')
+
+
+INSERT INTO student(5, 'Santosh K C', 'COSC')
+INSERT INTO student(6, 'Zhang Yongli', 'COSC')
+INSERT INTO student(7, 'Huijie Li', 'COSC')
+INSERT INTO student(8, 'Nguyen', 'COSC')
+INSERT INTO student(9,'Puja Anchlia', 'COSC')
+INSERT INTO student (10    ,     'Suraj Maharjan', 'COSC'   )
+INSERT INTO student (11    ,     'Prasha Shrestha ', 'COSC' )   
+INSERT INTO faculty(4, 'Edgar Gabriel', 'Professor',       'COSC'   )   
+INSERT INTO coursestudent (5, 2)
+INSERT INTO coursestudent (5, 1)
+INSERT INTO coursestudent (5, 3)
+INSERT INTO coursestudent (6, 1)
+INSERT INTO coursestudent (6, 4)
+INSERT INTO coursestudent (6, 3)
+INSERT INTO coursestudent (7, 1)
+INSERT INTO coursestudent (7, 4)
+
+INSERT INTO coursestudent (7, 3)
+
+INSERT INTO coursestudent (10, 1)
+
+INSERT INTO coursestudent (11, 1)
+
+INSERT INTO coursestudent (9, 4)
+SELECT * FROM coursestudent , course WHERE       courseid=courseid
